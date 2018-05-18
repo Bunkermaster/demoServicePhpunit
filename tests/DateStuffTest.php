@@ -10,6 +10,8 @@ class DateStuffTest extends TestCase
     public function testAge()
     {
         $dateStuff = new DateStuff();
-        $this->assertEquals(12, $dateStuff->getAge(new \DateTime()));
+        $this->assertEquals(3, $dateStuff->getAge(new \DateTime('2015-05-01')));
     }
+
+    
 }

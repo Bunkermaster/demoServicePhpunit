@@ -9,8 +9,11 @@ namespace App\Service;
  */
 class DateStuff
 {
-    public function getAge(\DateTime $dateTime)
+    public function getAge($dateTime)
     {
-        return 12;
+        // gestion de la typeError si type pas DateTime
+        $diff = $dateTime->diff(new \DateTime());
+
+        return $diff->y;
     }
 }
